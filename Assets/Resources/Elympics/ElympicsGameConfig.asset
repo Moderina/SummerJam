@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: ElympicsGameConfig
   m_EditorClassIdentifier: 
   gameName: SummerJam
-  gameId: f9c99e43-3f0d-45a4-9f02-2fd94b8cbe2f
+  gameId: 8a358cbb-a478-41c1-8742-b37eadc4a806
   gameVersion: 1
-  players: 2
-  gameplayScene: Assets/Scenes/SampleScene.unity
-  gameplaySceneAsset: {fileID: 102900000, guid: 8c9cfa26abfee488c85f1582747f6a02, type: 3}
+  players: 6
+  gameplayScene: Assets/Settings/Scenes/URP2DSceneTemplate.unity
+  gameplaySceneAsset: {fileID: 102900000, guid: 2cda990e2423bbf4892e6590ba056729, type: 3}
   botsInServer: 1
   useWeb: 0
   legacyMatchmakingClient: 0
@@ -51,6 +51,26 @@ MonoBehaviour:
     queueName: 
     regionName: 
   testPlayers:
+  - userId: 
+    isBot: 0
+    botDifficulty: 0
+    gameEngineData: 
+    matchmakerData: []
+  - userId: 
+    isBot: 0
+    botDifficulty: 0
+    gameEngineData: 
+    matchmakerData: []
+  - userId: 
+    isBot: 0
+    botDifficulty: 0
+    gameEngineData: 
+    matchmakerData: []
+  - userId: 
+    isBot: 0
+    botDifficulty: 0
+    gameEngineData: 
+    matchmakerData: []
   - userId: 
     isBot: 0
     botDifficulty: 0
