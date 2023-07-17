@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Actions : MonoBehaviour
 {
-    [SerializeField] private bool isWorking;
+    [SerializeField] private bool isWorking = false;
 
     public void UpdateActions(bool work) 
     {
