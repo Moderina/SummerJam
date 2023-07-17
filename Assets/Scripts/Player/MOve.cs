@@ -11,7 +11,6 @@ public class MOve : MonoBehaviour
     [SerializeField] private Transform head;
     private int faceDir = 1;
     [SerializeField] private float jumpPower;
-    // Start is called before the first frame update
     public void Movement(int direction, int jump, Vector3 mousePos)
     {
         rb.velocity = new Vector2(direction * speed, 0);
@@ -26,8 +25,7 @@ public class MOve : MonoBehaviour
         if (faceDir > 0) 
         {
             var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            head.eulerAngles = new Vector3(0, 0, angle);
-            Debug.Log(angle);
+            head.eulerAngles = new Vector3(0, 0, angle + 90);
             if ((angle > 90 || angle < -90))
             {
                 faceDir = -faceDir;
@@ -37,8 +35,7 @@ public class MOve : MonoBehaviour
         else 
         {
             var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 180;
-            head.eulerAngles = new Vector3(0, 0, angle);
-            Debug.Log(angle);
+            head.eulerAngles = new Vector3(0, 0, angle - 90);
             if ( angle < -90 && angle > -270)
             {
                 faceDir = -faceDir;

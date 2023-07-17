@@ -6,7 +6,7 @@ public struct InputStruct
 {
     public int direction;
     public int jump;
-
+    public bool work;
     public Vector3 mousePos;
 }
 
@@ -18,7 +18,8 @@ public class Inputs : MonoBehaviour
     {
         inputStruct.mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         inputStruct.direction = (int)Input.GetAxisRaw("Horizontal");
-        if (Input.GetKeyDown(KeyCode.Space)) inputStruct.jump=1;
+        if (Input.GetKeyDown(KeyCode.W)) inputStruct.jump=1;
+        inputStruct.work = Input.GetKey(KeyCode.Space);
     }
 
     public InputStruct GetInput() 
@@ -26,6 +27,7 @@ public class Inputs : MonoBehaviour
         InputStruct returnstruct = inputStruct;
         inputStruct.direction = 0;
         inputStruct.jump = 0;
+        inputStruct.work = false;
         inputStruct.mousePos = transform.position + transform.right;
         return returnstruct;
     }
